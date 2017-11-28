@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arcade Web</title>
+  <meta charset="utf-8">
+  <!--
+		Adapta el tamaño al ancho de la pantalla (pensado para moviles) 
+		width=device-width se establece que la pagina siga el ancho de la pantalla
+		initial-scale=1 la escala del zoom por defecto que debe seguir el navegador
+	-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+
+
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-inverse"> <!-- Navbar con colores oscuros -->
+		<div class="container"> <!-- Navbar de tamaño fijo -->
+			<div class="navbar-header"> 
+	
+				<!-- Botón en el que se oculta las opciones del navbar cuando la pantalla tiene un ancho menor a 768px, cifra minima para pantallas tablet (sm).
+					Se puede reducir el ancho minimo modificando la variable @grid-float-breakpoint-->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<!-- Líneas horizontales que se dibujan en el botón de ocultación-->
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			</button>
+			</div>
+			
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Ranking</a></li>
+					<li><a href="#">Foro</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Clase para anidar iframe con bootstrap-->
+	<div class="container">
+		<div class="embed-responsive embed-responsive-16by9"> <!-- Clase para iframe en formato 16:9-->
+			<iframe class="embed-responsive-item" src="html/carrusel.html">
+			<p>Tu navegador no soporta iframes.</p>
+			</iframe>
+		</div> 
+	</div>
+	
+	
+	<footer>
+	<p align="center"><a href="https://github.com/arcadetoweb" target="_blank"> Repositorio en Github</a></p>
+	</footer>
+
+</body>
+</html>

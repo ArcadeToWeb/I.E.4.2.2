@@ -134,16 +134,16 @@ function main() {
 	srcUfoHighP.type = "audio/mpeg";
 	srcUfoLowP.type = "audio/mpeg";
 
-	srcInvaderKilled.src = "resources/audio/shoot.wav";
-	srcExplosion.src = "resources/audio/explosion.wav";
-	srcShoot.src = "resources/audio/invaderkilled.wav";
-	srcFastinvader1.src = "resources/audio/fastinvader1.wav";
-	srcFastinvader2.src = "resources/audio/fastinvader2.wav";
-	srcFastinvader3.src = "resources/audio/fastinvader3.wav";
-	srcFastinvader4.src = "resources/audio/fastinvader4.wav";
-	srcGameOsong.src = "resources/audio/gameOver.mp3";
-	srcUfoHighP.src = "resources/audio/ufo_highpitch.wav";
-	srcUfoLowP.src = "resources/audio/ufo_lowpitch.wav";
+	srcInvaderKilled.src = "../resources/audio/shoot.wav";
+	srcExplosion.src = "../resources/audio/explosion.wav";
+	srcShoot.src = "../resources/audio/invaderkilled.wav";
+	srcFastinvader1.src = "../resources/audio/fastinvader1.wav";
+	srcFastinvader2.src = "../resources/audio/fastinvader2.wav";
+	srcFastinvader3.src = "../resources/audio/fastinvader3.wav";
+	srcFastinvader4.src = "../resources/audio/fastinvader4.wav";
+	srcGameOsong.src = "../resources/audio/gameOver.mp3";
+	srcUfoHighP.src = "../resources/audio/ufo_highpitch.wav";
+	srcUfoLowP.src = "../resources/audio/ufo_lowpitch.wav";
 
 	invaderKilled = new Audio();
 	explosion = new Audio();
@@ -186,7 +186,7 @@ function main() {
 		init();
 		runOpening();
 	});
-	img.src = "resources/img/invaders.png"
+	img.src = "../resources/img/invaders.png"
 };
 
 function init() {

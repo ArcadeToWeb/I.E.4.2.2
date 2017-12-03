@@ -9408,9 +9408,10 @@ p {
 .game-wrap {
 	padding: 0;
 	margin: auto;
-	flex: 0 0 40%;
-	max-width: 40%;
+	flex: 0 0 41%;
+	max-width: 41%;
 	height: 93%;
+	overflow:hidden;
 }
 
 .behind-overlay {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Space Invaders</title>
+	<link rel="shortcut icon" href="">
+	<!--<meta http-equiv="cache-control" content="no-cache"/>-->
+	<meta http-equiv="cache-control" content="public"/>
+	<meta http-equiv="cache-control" content="max-age=86400"/>
+
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+	<script type="text/javascript" src="../js/classes.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+
+</head>
+<body>
+	<div class="container fit">
+		<div class="row fit pAb hidden-xs-down">	<!-- Background Scene -->
+			<div class="col scene fit pAb" id="scene">
+				<img data-depth="0.1" src="../resources/img/Background-Colors/B-Green.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.2" src="../resources/img/Background-Colors/B-Orange.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.3" src="../resources/img/Background-Colors/B-Purple.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.4" src="../resources/img/Background-Colors/B-Red.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.5" src="../resources/img/Background-Colors/B-White.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.6" src="../resources/img/Background-Colors/B-Yellow.png" class="img-responsive parallax fit">
+				
+				<img data-depth="0.7" src="../resources/img/Background-Colors/Planet.png" class="img-responsive parallax fit">
+			</div>
+		</div>
+		<div class="row fit pAb hidden-xs-down">
+			<div class="col fit">
+				<img src="../resources/img/B-Game.png" class="img-responsive fit pAb bGame">
+				<img src="../resources/img/overlay.png" class="img-responsive fit pAb overlay">		
+			</div>
+		</div>
+		<div class="row fit">
+
+			<div class="col-3 hidden-xs-down" style="margin: 0; padding: 0;"></div>
+
+			<div class="fill-xs-down col-5 game-wrap">
+				<div class="canvas behind-overlay" id="canv">
+					<div class="scor-wrap">
+						<h5 class="arc-font">Score: <span id="score"></span></h6>
+					</div>
+					<div class="canv-wrap">
+						<canvas id="canvas"></canvas>
+					</div>
+					<div class="liv-wrap">
+						<h5 class="arc-font"><span id="lives"></span></h6>
+					</div>
+				</div>
+				<div class="start" id="start" tabindex="0" onkeypress="pts()" onclick="pts()">
+					<h5 id="startText" class="arc-font blink">Press any key</h5>
+					<img id="spInv" class="pAb" src="../resources/img/spInv.png" class="img-responsive fit">
+					<img id="pts" class="pAb" src="../resources/img/pts.png" class="img-responsive fit">
+				</div>
+				<div class="startScreen behind-overlay" id="startS">
+					<video id="startScreen" loop>
+						<source src="../resources/vid/start.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div id="gameOver" class="behind-overlay">
+					<h1 class="arc-font">GAME OVER</h1>
+					<form onsubmit="submitData()">
+						<span class="arc-font">
+							NAME
+							<input type="text" name="name" id="nameInput" maxlength="10" size="10" required="required">
+						</span>
+						<input type="submit" style="display: none">
+					</form>
+				</div>
+			</div>
+
+			<div class="col-3 hidden-xs-down" style="margin: 0; padding: 0;">
+				<aside class="sidebar arc-font pAb behind-overlay">
+					<h6>TOP 5 PLAYERS</h6>
+					<ol id="scores"></ol>
+				</aside>
+			</div>
+
+		</div>
+	</div>
+
+	<!--SCRIPTS-->
+	<script type="text/javascript" src="../js/main.js"></script>
+	<script type="text/javascript" src="../js/parallax.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script>
+		var scene = document.getElementById("scene");
+		var parallax = new Parallax(scene);
+	</script>
+</body>
+</html>

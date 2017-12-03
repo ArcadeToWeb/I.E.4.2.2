@@ -1,0 +1,34 @@
+html, body{
+	background-color: black;
+	height: 100%;
+}
+
+#enlace_footer{
+	text-align: center;
+}
+
+.dropdown-menu{
+	padding: 15px; 
+	padding-bottom: 0px;
+
+}
+
+.entrar{
+	clear: left; 
+	width: 100%;
+	height: 32px;
+	font-size: 13px;
+
+}
+
+.container {
+	margin:0;
+	padding: 0;
+	width: 100%;
+    /*max-width: 100%;*/
+    height: 100%;
+}
+
+iframe{
+	width: 100%;
+}

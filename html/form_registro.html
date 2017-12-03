@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Registrate</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/form.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	 
+	
+</head>
+<body>
+	
+		<h1>Crea tu cuenta:</h1>
+		<br/>
+	
+			
+<!--
+	<input type="text" name="inactivo" size="80" value="Este formulario se visualizar� mejor con navegadores de la �ltima generaci�n"  disabled readonly>
+-->
+	<form class="" action="" method="post" enctype="text/plain">
+	<!--
+		/- method establece forma envio de datos: get-> URL / post-> http
+		/- enctype tipo encoded 
+	-->
+	
+	<fieldset >
+	
+		<legend >1. Informacion de usuario</legend>
+	
+		<label for="user">Usuario</label> 
+		<!--label da ciertas opciones de acceso a la etiqueta asociada con atb(for), como por ejemplo que al seleccionar con el rat�n el texto del label se abra el control del input-->
+			<input name="usuario" id="user" size="10" maxlength="15" tabindex="1" required/>
+		<br/>
+	<!--
+		/- Cuadro de entrada de informaci�n. name es para manejarlo con js (por ejemplo) 
+		/- id debe coincidir con for del label
+		/- size tama�o marco escritura 
+		/- tabindex marca orden de navegacion con el tabulador 
+	--> 
+
+		<label for="email">Email:</label>
+			<input name="email"  id="email" type="email" size="15" tabindex="2" required/>
+		<br/>
+		<label for="password">Contrase&ntilde;a:</label>
+			<input name="password" id="password" type="password" size="15" tabindex="3" required/>
+			<input type="password" id="confirma_p" onfocusout="validatePassword()" tabindex="4" placeholder="Confirma Contrase&ntilde;a" required>
+			<script src="../js/conf_contr.js" type="text/javascript" ></script>
+	
+		</fieldset>
+
+	
+
+	
+	<fieldset>
+
+		<legend>2.Informacion personal</legend>
+	
+		<label for="nombre">Nombre:</label>
+			<input type="text" name="nombre" id="nombre" size="20"  tabindex="5" required/>
+	<br/>
+		<label for="apellidos">Apellidos:</label>
+			<input name="apellidos" id="apellidos" type="text" size="15" tabindex="6">
+	
+	<br/>
+		<label for="fecha_nac">Fecha de nacimiento::</label>
+			<input name="fecha_nac" id="fecha_nac" type="date" tabindex="7">
+	<br/>
+		<label >Sexo:</label>
+			<input name="Sexo" id="sexo" type="radio" value="hombre" tabindex="8">Hombre
+			<input name="Sexo" id="sexo" type="radio" value="mujer" tabindex="9">Mujer
+	<br/>
+		<label for="pais">Pais:</label>
+			<input name="pais" id="pais" type="text" tabindex="10" size="10">
+	<br/>
+		<label for="localidad">Localidad:</label>
+			<input name="localidad" id="localidad" type="text" tabindex="11" size="10">
+	<br/>
+		<label for="cp">C.P.:</label>
+			<input name="cp" id="cp" type="number" min ="0" tabindex="12" size="6">
+	<br/>
+	
+		
+	</fieldset>
+	
+
+	
+	<fieldset>
+
+		<legend accesskey="4">3. Informacion adicional</legend>
+	
+		<label for="con_web">&iquest;Como conocio la web?</label>
+			<select class="custom-select" name="con_web" id="con_web" size="1" tabindex="13">
+				<option value="azar">Al azar</option>
+				<option value="hablar">Me hablaron de ella</option>
+				<option value="anuncio">A trav&eacute;s de un anuncio</option>
+				<option value="enlace">Por un enlace desde otra pagina</option>
+			</select>
+	<p>
+		<input type="checkbox" name="infoweb" id ="infoweb" value="si" checked tabindex="14"> Deseo recibir en mi correo informacion sobre noticias y novedades de la web
+	<br>
+	</p>	
+	</fieldset>
+	
+	<button name="submit" value="submit" type="submit" accesskey="e"  tabindex="15">Enviar datos&nbsp; 
+		<img src="../resources/enviar.png" alt="Enviar" width="32" height="30" align="middle">
+	</button>
+	
+	<button name="reset" type="reset" accesskey="b" tabindex="16">Borrar datos&nbsp;
+		<img src="../resources/papel.png" alt="Borrar todos los datos" width="32" height="30" align="middle">
+	</button>
+
+</form>
+		 	
+</body>
+</html>
+

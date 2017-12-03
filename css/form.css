@@ -3,6 +3,35 @@ body {
     background-color: black;
 }
 
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video_background { 
+  position: absolute; 
+  bottom: 0px; 
+  right: 0px;  
+  width: 100%; 
+  height: 100%; 
+  z-index: -1000; 
+  overflow: hidden; 
+}
+
+#video_pattern { 
+  background:#fff; 
+  position: fixed; 
+  opacity: 0.8; 
+  left: 0px; 
+  top: 0px; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 1; 
+}
+
+
 h1{
     color: white;
     position: relative;
@@ -25,7 +54,7 @@ fieldset{
     opacity: 1;
     background-color: white;/*rgb(0, 204, 255)*/
     position: relative;
-    margin-left:3%;
+    margin-left:25%;
     border: 2px solid #777;
     box-shadow: 4px 4px 5px #999;
 
@@ -59,9 +88,17 @@ input {
 
 #infoweb{width: 8%;}
 
-button {
+#submit #reset{
     position: relative;
     height: auto;
     margin-top: 4px;
-    margin-left:6%;
    }
+#submit{
+	margin-left:31%;
+}
+
+#reset{
+	margin-left:6%;
+}
+
+

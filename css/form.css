@@ -1,0 +1,67 @@
+body {
+    font: 100%/120% "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    position: relative;
+    align-content:center;
+    margin-bottom: 0;
+}
+
+input:not(#infoweb):not(#sexo) {
+    border: 3px linned #999;
+    border-radius: 7px;
+    box-shadow: 4px 4px 5px  gray;
+    width: auto;
+  
+
+  }
+
+fieldset{
+    width: auto;
+    max-width: 50% ;
+    opacity: 1;
+    background-color: white;/*rgb(0, 204, 255)*/
+    position: relative;
+    margin-left:3%;
+    border: 2px solid #777;
+    box-shadow: 4px 4px 5px #999;
+
+}
+
+legend{
+
+    opacity: 1;
+    background: white;
+    width:auto;
+    /*box-shadow: 4px 4px 5px #999;*/
+    margin-top: 30px;
+    margin-bottom: 8px;
+    margin-left: 2%;
+    
+}
+
+label {
+    margin-left: 2%;
+    margin-top: 0.15%;
+      
+}
+
+input {
+    height:20px; 
+    width:220px; 
+    
+}
+
+#sexo{ width: 40px;}
+
+#infoweb{width: 8%;}
+
+button {
+    position: relative;
+    height: auto;
+    margin-top: 4px;
+    margin-left:6%;
+   }
